@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { PageHllPage } from '../page-hll/page-hll';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CreateAccountPage } from '../create-account/create-account';
 
 @Component({
   selector: 'page-home',
@@ -28,9 +29,13 @@ loginForm: FormGroup;
   }
   gopagehll(){ 
     console.log('Primer click');    
+    this.navCtrl.push(CreateAccountPage);
     //let data = {user:this.user,group:this.group,courses:this.cursos,date:new Date(),money:this.money};
     //console.log(data);
     //this.navCtrl.push(PageHllPage,data);
+  }
+  gocreate(){
+    this.navCtrl.push(CreateAccountPage);
   }
 
 }

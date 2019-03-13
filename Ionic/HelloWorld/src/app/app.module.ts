@@ -9,13 +9,15 @@ import { HomePage } from '../pages/home/home';
 import { PageHllPage } from '../pages/page-hll/page-hll';
 import { PagescndllPage } from '../pages/pagescndll/pagescndll';
 import { PipesModule } from '../pipes/pipes.module';
+import { CreateAccountPage } from '../pages/create-account/create-account';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     PageHllPage,
-    PagescndllPage
+    PagescndllPage,
+    CreateAccountPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { PipesModule } from '../pipes/pipes.module';
     MyApp,
     HomePage,
     PageHllPage,
-    PagescndllPage
+    PagescndllPage,
+    CreateAccountPage
   ],
   providers: [
     StatusBar,
