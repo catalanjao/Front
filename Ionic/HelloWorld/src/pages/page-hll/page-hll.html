@@ -1,0 +1,42 @@
+<!--
+  Generated template for the PageHllPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>About {{user}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p >La nueva pagina {{data.user}}- {{data.date | date: "MM yyyy"}}</p>
+  <p>{{data.money | currency:'EU'}}</p>
+  <p>{{data.money | percent}}</p>
+  <p>{{data.money |  number:'3.5'}}</p>
+  <p>{{data.user | elpipe1:"Nadaprro"}}</p>
+  <button ion-button large [color]="colorlabel" (click)="goScn()">Customer</button>
+  <div>
+      <ion-item>
+          <ion-label [color]="colorlabel">Cursos</ion-label>
+          <ion-select>
+              <ion-option *ngFor="let course of data.courses; let i = index">{{course}} - {{i}}</ion-option>
+            </ion-select>
+          </ion-item>
+  </div>
+  <div class="wrapper">
+      <div class="wrapper-info"
+      *ngFor="let course of data.courses; let i = index;"
+      [ngClass]="{
+        'courseone' : i===0,
+        'coursetwo' : i===1,
+        'coursethree' : i===2,
+        'coursefour' : i===3}">
+        <h1>Curso: {{course}}</h1>
+        <h1>Nombre: {{data.user | uppercase}}</h1>
+        <h1>Date: {{data.date | date:'dd MM yyyy'}}</h1>
+        <h1>Precio: {{data.money | currency: 'USD'}}</h1>
+    </div>
+  </div>
+</ion-content>

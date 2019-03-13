@@ -1,0 +1,37 @@
+page-page-hll {
+
+    .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .courseone{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        background-color: aquamarine;
+        margin: 20px;
+    }
+    .coursetwo{
+        display: flex;
+        padding: 10px;
+        flex-wrap: wrap;
+        background-color: brown;
+        margin: 20px;
+    }
+    .coursethree{
+        display: flex;
+        padding: 10px;
+        flex-wrap: wrap;
+        background-color: blueviolet;
+        margin: 20px;
+    }
+    .coursefour{
+        display: flex;
+        padding: 10px;
+        flex-wrap: wrap;
+        background-color: chartreuse;
+        margin: 20px;
+    }
+}

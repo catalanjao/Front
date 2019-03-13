@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+  <form class="wrapper" [formGroup]="loginForm">
+    <h1>Curso Ionic 3</h1>
+    <ion-item>
+        <ion-label fixed>Usuario</ion-label>
+        <ion-input formControlName="usr"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label fixed>Pwd</ion-label>
+        <ion-input type="password" formControlName="pwd"></ion-input>
+    </ion-item>        
+    <button ion-button outline [color] =" loginForm.valid ? 'primary':'danger'" 
+    (click)="gopagehll()">Login</button>
+  </form>
+  <div>
+    <h1>Usuario => {{user}}</h1>
+    <h1>Grupo =>{{group}}</h1>
+  </div>
+</ion-content>
+
