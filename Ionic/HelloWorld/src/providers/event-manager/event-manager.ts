@@ -12,6 +12,7 @@ import { Loading } from 'ionic-angular';
 @Injectable()
 export class EventManagerProvider {
   isloading = new Subject<boolean>();
+  msgtoast = new Subject<string>();
   constructor(public http: HttpClient) {
     console.log('Hello EventManagerProvider Provider');
   }
@@ -23,4 +24,10 @@ export class EventManagerProvider {
     return this.isloading.asObservable();
   }
 
+  setMsgToast(text:string){
+    this.msgtoast.next(text);
+  }
+  getMsgToast(){
+    return this.msgtoast.asObservable();
+  }
 }

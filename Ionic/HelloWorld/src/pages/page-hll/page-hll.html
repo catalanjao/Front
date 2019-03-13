@@ -10,7 +10,11 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding>  
+  <card
+  *ngFor="let item of students" 
+  [student]="item"
+  ></card>
   <p >La nueva pagina {{data.user}}- {{data.date | date: "MM yyyy"}}</p>
   <p>{{data.money | currency:'EU'}}</p>
   <p>{{data.money | percent}}</p>

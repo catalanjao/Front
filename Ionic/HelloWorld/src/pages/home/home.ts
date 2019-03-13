@@ -3,7 +3,6 @@ import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { PageHllPage } from '../page-hll/page-hll';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CreateAccountPage } from '../create-account/create-account';
-import { LoginProviderMock } from '../../app/mock/loginProviderMock';
 import { LoginProvider } from '../../providers/login/login';
 import { EventManagerProvider } from '../../providers/event-manager/event-manager';
 
@@ -54,6 +53,7 @@ loginForm: FormGroup;
     }, error=> {
       console.log(error);
       this.loading.setIsLoading(false);
+      this.loading.setMsgToast(error.error.message);
     },()=>{
       console.log();
     });

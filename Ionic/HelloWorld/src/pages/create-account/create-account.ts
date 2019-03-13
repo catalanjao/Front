@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { StudensServiceProvider } from '../../providers/studens-service/studens-service';
 import { Stundent } from '../../app/model/studentes.model';
 import { LoginProviderMock } from '../../app/mock/loginProviderMock';
+import { EventManagerProvider } from '../../providers/event-manager/event-manager';
 
 /**
  * Generated class for the CreateAccountPage page.
@@ -22,8 +23,7 @@ export class CreateAccountPage {
               public navParams: NavParams,
               private fb:FormBuilder, 
               private studentprovider:StudensServiceProvider,
-              private loading: LoadingController,
-              private loging: LoginProviderMock) {
+              private loading: LoadingController) {
     this.createAccountForm = this.fb.group({
     name:['',Validators.required],
     app: ['',Validators.required],

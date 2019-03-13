@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Stundent } from '../../app/model/studentes.model';
-import { CREATE_USER } from '../../app/endpoints/endpints';
+import { CREATE_USER, GET_USERS, DEL_USER } from '../../app/endpoints/endpints';
 
 /*
   Generated class for the StudensServiceProvider provider.
@@ -18,5 +18,12 @@ export class StudensServiceProvider {
 
   createAccountStundent(account:Stundent){
     return this.http.post(CREATE_USER,account);
+  }
+
+  getStudents(){
+    return this.http.get(GET_USERS);
+  }
+  delStudents(id:number){
+    return this.http.delete(`${DEL_USER}${id}`);
   }
 }
