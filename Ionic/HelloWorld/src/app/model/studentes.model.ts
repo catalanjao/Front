@@ -1,4 +1,4 @@
-export class Stundet{
+export class Stundent{
     name: String;
     app: String;
     apm: String;

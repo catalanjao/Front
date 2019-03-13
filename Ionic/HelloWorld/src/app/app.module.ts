@@ -10,6 +10,11 @@ import { PageHllPage } from '../pages/page-hll/page-hll';
 import { PagescndllPage } from '../pages/pagescndll/pagescndll';
 import { PipesModule } from '../pipes/pipes.module';
 import { CreateAccountPage } from '../pages/create-account/create-account';
+import { StudensServiceProvider } from '../providers/studens-service/studens-service';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginProvider } from '../providers/login/login';
+import { LoginProviderMock } from './mock/loginProviderMock';
+import { EventManagerProvider } from '../providers/event-manager/event-manager';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,8 @@ import { CreateAccountPage } from '../pages/create-account/create-account';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    PipesModule
+    PipesModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -35,7 +41,14 @@ import { CreateAccountPage } from '../pages/create-account/create-account';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    StudensServiceProvider,
+//    {
+     //provide: LoginProvider,
+     //useClass: LoginProviderMock
+    //}
+    LoginProvider,
+    EventManagerProvider
   ]
 })
 export class AppModule {}

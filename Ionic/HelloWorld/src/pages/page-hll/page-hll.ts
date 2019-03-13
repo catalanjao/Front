@@ -20,8 +20,9 @@ export class PageHllPage {
   data:any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.data=this.navParams.data;
-    this.user = this.navParams.get('user');
-    this.group = this.navParams.get('group');
+    this.user = navParams.get('name');
+    console.log(this.user);
+    //this.group = this.navParams.get('group');
   }
 
   ionViewDidLoad() {
