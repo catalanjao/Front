@@ -1,9 +1,0 @@
-[submodule "Angular7BaseCli"]
-	path = Angular7BaseCli
-	url = ../../IngJavierR/Angular7BaseCli
-[submodule "TypeScript2Demo"]
-	path = TypeScript2Demo
-	url = ./
-[submodule "RxJs6Demo"]
-	path = RxJs6Demo
-	url = ../../IngJavierR/RxJs6Demo.git
